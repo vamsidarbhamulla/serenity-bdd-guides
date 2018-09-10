@@ -1,0 +1,65 @@
+= Working on a Getting Started guide to setup webdrivers
+Optional Author Name <vamsi.krishna0207@gmail.com>
+Optional version, optional date
+:Author:    Author Vamsi
+:Email:     <vamsi.krishna0207@gmail.com>
+:Date:      09-09-2018 date
+:Revision:  1.0
+
+This guide walks you through to install chrome driver
+
+== Getting Started
+To set up gecko driver
+
+=== What you’ll build
+Set up gecko driver to run a basic test
+
+=== What you'll need
+About 5 minutes
+
+=== Installing gecko driver in windows
+Visit the geckodriver downloads page https://github.com/mozilla/geckodriver/releases[latest-gecko-driver-downloads^].
+
+Download geckodriver-v0.21.0-win64.zip file.
+
+To install it simply unpack the downloaded archive and add the downloaded folder path to environment variable named "PATH".
+
+image:/images/win-env-1.png["Win-Path-1",width=128,link="/images/win-env-1.png"]
+image:/images/win-env-2.png["Win-Path-2",width=128,link="/images/win-env-2.png"]
+image:/images/win-env-3.png["Win-Path-3",width=128,link="/images/win-env-3.png"]
+
+=== Installing gecko driver in Linux/Mac Machine:
+
+Open a command prompt and run the below steps
+
+[source,bash]
+-----------------
+
+# step 1: optional step to install required binaries
+# sudo apt-get update -y && apt-get install -y wget unzip
+
+# step 2: set the driver version and driver installation directory
+GECKODRIVER_VERSION 2.41
+GECKODRIVER_DIR /usr/local/bin/webdrivers
+mkdir $GECKODRIVER_DIR
+
+# step 3: linix - download and extract the zip file from internet for linux
+wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-linux64.tar.gz"
+tar -xzf geckodriver-v0.21.0-linux64.tar.gz -C $GECKODRIVER_DIR
+
+# step 3: mac - download and extract the zip file from internet for mac
+wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-macos.tar.gz"
+tar -xzf geckodriver-v0.21.0-macos.tar.gz -C $GECKODRIVER_DIR
+
+# step 4: set chrome driver path to environment variables
+export PATH=$GECKODRIVER_DIR:$PATH >> .bash_profile
+bash ~/.bash_profile
+
+# step 5: optional - in case of file permission issues run the below commands
+sudo chmod +x $GECKODRIVER_DIR/geckodriver
+bash ~/.bash_profile
+
+-----------------
+
+== Summary
+Congratulations! You’ve just installed chrome driver successfully in your machine.
