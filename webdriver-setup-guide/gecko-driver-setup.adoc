@@ -35,27 +35,27 @@ Open a command prompt and run the below steps
 [source,bash]
 -----------------
 
-# step 1: optional step to install required binaries
+# step 0: optional step to install required binaries
 # sudo apt-get update -y && apt-get install -y wget unzip
 
-# step 2: set the driver version and driver installation directory
-GECKODRIVER_VERSION 2.41
-GECKODRIVER_DIR /usr/local/bin/webdrivers
+# step 1: set the driver version and driver installation directory
+GECKODRIVER_VERSION=v0.21.0
+GECKODRIVER_DIR=/usr/local/bin/webdrivers
 mkdir $GECKODRIVER_DIR
 
-# step 3: linix - download and extract the zip file from internet for linux
+# step 2-linux: download and extract the zip file from internet for linux
 wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-linux64.tar.gz"
 tar -xzf geckodriver-v0.21.0-linux64.tar.gz -C $GECKODRIVER_DIR
 
-# step 3: mac - download and extract the zip file from internet for mac
+# step 2-mac: download and extract the zip file from internet for mac
 wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-macos.tar.gz"
 tar -xzf geckodriver-v0.21.0-macos.tar.gz -C $GECKODRIVER_DIR
 
-# step 4: set chrome driver path to environment variables
+# step 3: set chrome driver path to environment variables
 export PATH=$GECKODRIVER_DIR:$PATH >> .bash_profile
 bash ~/.bash_profile
 
-# step 5: optional - in case of file permission issues run the below commands
+# step 4: optional - in case of file permission issues run the below commands
 sudo chmod +x $GECKODRIVER_DIR/geckodriver
 bash ~/.bash_profile
 
