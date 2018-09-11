@@ -30,7 +30,7 @@ image:/images/win-env-3.png["Win-Path-3",width=128,link="/images/win-env-3.png"]
 
 === Installing gecko driver in Linux/Ubuntu
 
-Open a command prompt and run the below steps
+Open a shell and run the below steps
 
 [source,bash]
 -----------------
@@ -62,7 +62,7 @@ which geckodriver # you should see /usr/local/bin/webdrivers/geckodriver
 
 === Installing gecko driver in Mac
 
-Open a command prompt and run the below steps
+Open a terminal and run the below steps
 
 [source,bash]
 -----------------
