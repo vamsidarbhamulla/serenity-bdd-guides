@@ -43,7 +43,7 @@ GECKODRIVER_VERSION=v0.21.0
 GECKODRIVER_DIR=/usr/local/bin/webdrivers
 mkdir -p $GECKODRIVER_DIR
 
-# step 2: download and extract the zip file from internet for linux
+# step 2: download and extract the zip file
 wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-linux64.tar.gz"
 tar -xzf geckodriver-v0.21.0-linux64.tar.gz -C $GECKODRIVER_DIR
 
@@ -75,7 +75,7 @@ GECKODRIVER_VERSION=v0.21.0
 GECKODRIVER_DIR=/usr/local/bin/webdrivers
 mkdir -p $GECKODRIVER_DIR
 
-# step 2: download and extract the zip file from internet for mac
+# step 2: download and extract the zip file
 wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-macos.tar.gz"
 cd $GECKODRIVER_DIR
 gunzip -c geckodriver-v0.21.0-macos.tar.gz | tar xopf -
@@ -94,4 +94,4 @@ which geckodriver # you should see /usr/local/bin/webdrivers/geckodriver
 -----------------
 
 == Summary
-Congratulations! You’ve just installed chrome driver successfully in your machine.
+Congratulations! You’ve just installed gecko driver successfully in your machine.
