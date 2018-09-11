@@ -1,4 +1,4 @@
-= Working on a Getting Started guide to setup webdrivers
+= Working on a Getting Started guide to setup Firefox/Geckodriver
 Optional Author Name <vamsi.krishna0207@gmail.com>
 Optional version, optional date
 :Author:    Author Vamsi
