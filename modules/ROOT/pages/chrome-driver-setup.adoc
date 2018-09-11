@@ -22,10 +22,8 @@ Visit the chromedriver downloads page http://chromedriver.chromium.org/downloads
 
 Download chromedriver_win32.zip file.
 
-To install it simply unpack the downloaded archive and add the downloaded folder path to environment variable named "PATH".
+To install unpack the downloaded archive and add the downloaded folder path to environment variable named "PATH".
 
-
-ifndef::imagesdir[:imagesdir: ../assets/images]
 
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="../assets/images/win-env-1.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-2.png["Win-Path-2",width=128,link="../assets/images/win-env-2.png"]
