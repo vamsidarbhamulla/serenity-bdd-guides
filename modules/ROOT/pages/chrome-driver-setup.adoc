@@ -24,40 +24,75 @@ Download chromedriver_win32.zip file.
 
 To install it simply unpack the downloaded archive and add the downloaded folder path to environment variable named "PATH".
 
-image:/images/win-env-1.png["Win-Path-1",width=128,link="/images/win-env-1.png"]
-image:/images/win-env-2.png["Win-Path-2",width=128,link="/images/win-env-2.png"]
-image:/images/win-env-3.png["Win-Path-3",width=128,link="/images/win-env-3.png"]
 
-=== Installing chrome driver in Linux/Mac Machine:
+ifndef::imagesdir[:imagesdir: ../assets/images]
 
-Open a command prompt and run the below steps
+image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png"]
+image:win-env-2.png["Win-Path-2",width=128,link="win-env-2.png"]
+image:../assets/images/win-env-3.png["Win-Path-3",width=128,link="../assets/images/win-env-3.png"]
+
+=== Installing chrome driver in Linux/Ubuntu
+
+Open a shell and run the below steps
 
 [source,bash]
 -----------------
 
-# step 0: optional step to install required binaries
+# step 0: optional - install required binaries - uncomment the below lines and run them
 # sudo apt-get update -y && apt-get install -y wget unzip
 
 # step 1: set the driver version and driver installation directory
 CHROMEDRIVER_VERSION=2.41
 CHROMEDRIVER_DIR=/usr/local/bin/webdrivers
-mkdir $CHROMEDRIVER_DIR
+mkdir -p $CHROMEDRIVER_DIR
 
-# step 2-linix: - download and extract the zip file from internet for linux
+# step 2: - download and extract the zip file from internet
 wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
-unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
-
-# step 2-mac: - download and extract the zip file from internet for mac
-wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_mac64.zip"
 unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
 # step 3: set chrome driver path to environment variables
 export PATH=$CHROMEDRIVER_DIR:$PATH >> .bash_profile
 bash ~/.bash_profile
 
-# step 4: optional - in case of file permission issues run the below commands
-sudo chmod +x $CHROMEDRIVER_DIR/chromedriver
+# step 4: check installation
+which chromedriver # you should see /usr/local/bin/webdrivers/chromedriver
+
+# step 5: optional - in case of file permission issues uncomment the below lines and run them
+# sudo chmod +x $CHROMEDRIVER_DIR/chromedriver
+# bash ~/.bash_profile
+
+-----------------
+
+=== Installing chrome driver in Mac
+
+Open a terminal and run the below steps
+
+[source,bash]
+-----------------
+
+# step 0: optional - install required binaries - uncomment the below lines and run them
+# brew install wget
+# brew install p7zip
+
+# step 1: set the driver version and driver installation directory
+CHROMEDRIVER_VERSION=2.41
+CHROMEDRIVER_DIR=/usr/local/bin/webdrivers
+mkdir -p $CHROMEDRIVER_DIR
+
+# step 2: - download and extract the zip file from internet
+wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_mac64.zip"
+7za x $CHROMEDRIVER_DIR/chromedriver* -o$CHROMEDRIVER_DIR
+
+# step 3: set chrome driver path to environment variables
+export PATH=$CHROMEDRIVER_DIR:$PATH >> .bash_profile
 bash ~/.bash_profile
+
+# step 4: check installation
+which chromedriver # you should see /usr/local/bin/webdrivers/chromedriver
+
+# step 5: optional - in case of file permission issues uncomment the below lines and run them
+# sudo chmod +x $CHROMEDRIVER_DIR/chromedriver
+# bash ~/.bash_profile
 
 -----------------
 

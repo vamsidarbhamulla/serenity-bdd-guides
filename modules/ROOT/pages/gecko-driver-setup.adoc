@@ -28,36 +28,68 @@ image:/images/win-env-1.png["Win-Path-1",width=128,link="/images/win-env-1.png"]
 image:/images/win-env-2.png["Win-Path-2",width=128,link="/images/win-env-2.png"]
 image:/images/win-env-3.png["Win-Path-3",width=128,link="/images/win-env-3.png"]
 
-=== Installing gecko driver in Linux/Mac Machine:
+=== Installing gecko driver in Linux/Ubuntu
 
 Open a command prompt and run the below steps
 
 [source,bash]
 -----------------
 
-# step 0: optional step to install required binaries
-# sudo apt-get update -y && apt-get install -y wget unzip
+# step 0: optional - install required binaries - uncomment the below lines and run them
+# sudo apt-get update -y && apt-get install -y wget
 
 # step 1: set the driver version and driver installation directory
 GECKODRIVER_VERSION=v0.21.0
 GECKODRIVER_DIR=/usr/local/bin/webdrivers
-mkdir $GECKODRIVER_DIR
+mkdir -p $GECKODRIVER_DIR
 
-# step 2-linux: download and extract the zip file from internet for linux
+# step 2: download and extract the zip file from internet for linux
 wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-linux64.tar.gz"
 tar -xzf geckodriver-v0.21.0-linux64.tar.gz -C $GECKODRIVER_DIR
-
-# step 2-mac: download and extract the zip file from internet for mac
-wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-macos.tar.gz"
-tar -xzf geckodriver-v0.21.0-macos.tar.gz -C $GECKODRIVER_DIR
 
 # step 3: set chrome driver path to environment variables
 export PATH=$GECKODRIVER_DIR:$PATH >> .bash_profile
 bash ~/.bash_profile
 
-# step 4: optional - in case of file permission issues run the below commands
-sudo chmod +x $GECKODRIVER_DIR/geckodriver
+# step 4: check installation
+which geckodriver # you should see /usr/local/bin/webdrivers/geckodriver
+
+# step 5: optional - in case of file permission issues uncomment the below lines and run them
+# sudo chmod +x $GECKODRIVER_DIR/geckodriver
+# bash ~/.bash_profile
+
+-----------------
+
+=== Installing gecko driver in Mac
+
+Open a command prompt and run the below steps
+
+[source,bash]
+-----------------
+
+# step 0: optional - install required binaries - uncomment the below line and run them
+# brew install wget
+
+# step 1: set the driver version and driver installation directory
+GECKODRIVER_VERSION=v0.21.0
+GECKODRIVER_DIR=/usr/local/bin/webdrivers
+mkdir -p $GECKODRIVER_DIR
+
+# step 2: download and extract the zip file from internet for mac
+wget -q --continue -P $GECKODRIVER_DIR "https://github.com/mozilla/geckodriver/releases/download/$GECKODRIVER_VERSION/geckodriver-v0.21.0-macos.tar.gz"
+cd $GECKODRIVER_DIR
+gunzip -c geckodriver-v0.21.0-macos.tar.gz | tar xopf -
+
+# step 3: set chrome driver path to environment variables
+export PATH=$GECKODRIVER_DIR:$PATH >> .bash_profile
 bash ~/.bash_profile
+
+# step 4: check installation
+which geckodriver # you should see /usr/local/bin/webdrivers/geckodriver
+
+# step 5: optional - in case of file permission issues uncomment the below lines and run them
+# sudo chmod +x $GECKODRIVER_DIR/geckodriver
+# bash ~/.bash_profile
 
 -----------------
 
