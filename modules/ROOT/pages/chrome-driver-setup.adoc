@@ -27,9 +27,9 @@ To install it simply unpack the downloaded archive and add the downloaded folder
 
 ifndef::imagesdir[:imagesdir: ../assets/images]
 
-image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png"]
-image:win-env-2.png["Win-Path-2",width=128,link="win-env-2.png"]
-image:../assets/images/win-env-3.png["Win-Path-3",width=128,link="../assets/images/win-env-3.png"]
+image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="../assets/images/win-env-1.png"]
+image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-2.png["Win-Path-2",width=128,link="../assets/images/win-env-2.png"]
+image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-3.png["Win-Path-3",width=128,link="../assets/images/win-env-3.png"]
 
 === Installing chrome driver in Linux/Ubuntu
 
@@ -46,7 +46,7 @@ CHROMEDRIVER_VERSION=2.41
 CHROMEDRIVER_DIR=/usr/local/bin/webdrivers
 mkdir -p $CHROMEDRIVER_DIR
 
-# step 2: - download and extract the zip file from internet
+# step 2: - download and extract the zip file
 wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_linux64.zip"
 unzip $CHROMEDRIVER_DIR/chromedriver* -d $CHROMEDRIVER_DIR
 
@@ -79,7 +79,7 @@ CHROMEDRIVER_VERSION=2.41
 CHROMEDRIVER_DIR=/usr/local/bin/webdrivers
 mkdir -p $CHROMEDRIVER_DIR
 
-# step 2: - download and extract the zip file from internet
+# step 2: - download and extract the zip file
 wget -q --continue -P $CHROMEDRIVER_DIR "http://chromedriver.storage.googleapis.com/$CHROMEDRIVER_VERSION/chromedriver_mac64.zip"
 7za x $CHROMEDRIVER_DIR/chromedriver* -o$CHROMEDRIVER_DIR
 
