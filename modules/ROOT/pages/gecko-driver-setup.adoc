@@ -1,4 +1,4 @@
-= Working on a Getting Started guide to setup Firefox/Geckodriver
+= Getting Started guide to setup Gecko driver
 Optional Author Name <vamsi.krishna0207@gmail.com>
 Optional version, optional date
 :Author:    Author Vamsi
@@ -6,7 +6,7 @@ Optional version, optional date
 :Date:      09-09-2018 date
 :Revision:  1.0
 
-This guide walks you through to install chrome driver
+This guide walks you through to set up gecko driver
 
 == Getting Started
 To set up gecko driver
@@ -15,18 +15,43 @@ To set up gecko driver
 Set up gecko driver to run a basic test
 
 === What you'll need
-About 5 minutes
+. About 10 minutes
+. Archiving tools like
+.. WinZip for windows
+.. tar for linux
+.. gunzip for mac
 
-=== Installing gecko driver in windows
-Visit the geckodriver downloads page https://github.com/mozilla/geckodriver/releases[latest-gecko-driver-downloads^].
 
-Download geckodriver-v0.21.0-win64.zip  or geckodriver-v0.21.0-win32.zip  file based on your CPU.
+=== Installing gecko driver in Windows
+.Step 0: Optional :
+Install Archiving tool like winzip if it is not installed
 
-To install unpack the downloaded archive and add the downloaded folder path to environment variable named "PATH".
+.Step 1:
+Create a folder called webdrivers in C drive (C:\webdrivers).
+
+.Step 2:
+. Download latest geckodriver-v0.21.0-win64.zip file from gecko driver downloads page https://github.com/mozilla/geckodriver/releases[latest-gecko-driver-downloads^]
+. Unpack the downloaded archive using winzip to C:\webdrivers folder. +
+
+.Step 3:
+Add the downloaded folder path (C:\webdrivers) to "PATH" environment variable using the steps provided in the screenshots below. +
 
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="../assets/images/win-env-1.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-2.png["Win-Path-2",width=128,link="../assets/images/win-env-2.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-3.png["Win-Path-3",width=128,link="../assets/images/win-env-3.png"]
+
+.Step 4:
+Check the installation +
+Open a command prompt and run
+
+[source,bash]
+-----------------
+where geckodriver //you should see C:\Webdrivers\geckodriver.exe
+-----------------
+
+.Step 5: Optional:
+Incase of environment variables not accesible run windows operating system in admin mode and repeat steps 3 and 4.
+
 
 === Installing gecko driver in Linux/Ubuntu
 
@@ -94,4 +119,4 @@ which geckodriver # you should see /usr/local/bin/webdrivers/geckodriver
 -----------------
 
 == Summary
-Congratulations! You’ve just installed gecko driver successfully in your machine.
+Congratulations! You’ve successfully setup gecko driver in your machine.
