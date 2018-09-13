@@ -18,10 +18,10 @@ Set up chrome driver to run a basic test
 . About 10 minutes
 . Archiving tools like
 .. WinZip for windows
+.. unzip for linux/ubuntu
 .. 7Zip for mac
-.. unzip for linux
 
-=== Setting up chrome driver in windows
+=== Setting up chrome driver in Windows
 .Step 0: Optional :
 Install Archiving tool like winzip if it is not installed
 
@@ -45,11 +45,11 @@ Open a command prompt and run
 
 [source,bash]
 -----------------
-where chromedriver //you should see C:\Webdrivers\chromedriver
+where chromedriver //you should see C:\Webdrivers\chromedriver.exe
 -----------------
 
 .Step 5: Optional:
-Incase of environment variables not accesible run windows operating system in admin mode
+Incase of environment variables not accesible run windows operating system in admin mode and repeat steps 3 and 4.
 
 === Setting up chrome driver in Linux/Ubuntu
 Open a shell and run the below steps
