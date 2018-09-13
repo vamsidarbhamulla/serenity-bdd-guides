@@ -1,4 +1,4 @@
-= Getting Started guide to setup chromedriver
+= Getting Started guide to setup chrome driver
 Optional Author Name <vamsi.krishna0207@gmail.com>
 Optional version, optional date
 :Author:    Author Vamsi
@@ -6,7 +6,7 @@ Optional version, optional date
 :Date:      09-09-2018 date
 :Revision:  1.0
 
-This guide walks you through to install chrome driver
+This guide walks you through to setup chrome driver
 
 == Getting Started
 To set up chrome driver
@@ -15,20 +15,41 @@ To set up chrome driver
 Set up chrome driver to run a basic test
 
 === What you'll need
-About 5 minutes +
-Archieving tools like +
-WinZip or Winrar (for windows) +
-7Zip or unzip (for mac and linux)
+. About 10 minutes
+. Archiving tools like
+.. WinZip for windows
+.. 7Zip for mac
+.. unzip for linux
 
 === Setting up chrome driver in windows
-Step 1: Open the chromedriver downloads page http://chromedriver.chromium.org/downloads[latest-chrome-driver-downloads^]. +
-Step 2: Download chromedriver_win32.zip file and unpack the downloaded archive using winzip or winrar to a specific folder (eg: C:\webdrivers) +
-Step 3: Add the downloaded folder path (C:\webdrivers) to environment variable named "PATH".
+.Step 0: Optional :
+Install Archiving tool like winzip if it is not installed
 
+.Step 1:
+Create a folder called webdrivers in C drive (C:\webdrivers).
+
+.Step 2:
+. Download chromedriver_win32.zip file from chromedriver downloads page http://chromedriver.chromium.org/downloads[latest-chrome-driver-downloads^]
+. Unpack the downloaded archive using winzip to C:\webdrivers folder. +
+
+.Step 3:
+Add the downloaded folder path (C:\webdrivers) to environment variable named "PATH" using the steps provided in the screenshots below. +
 
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="../assets/images/win-env-1.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-2.png["Win-Path-2",width=128,link="../assets/images/win-env-2.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-3.png["Win-Path-3",width=128,link="../assets/images/win-env-3.png"]
+
+.Step 4:
+Check the installation +
+Open a command prompt and run
+
+[source,bash]
+-----------------
+where chromedriver //you should see C:\Webdrivers\chromedriver
+-----------------
+
+.Step 5: Optional:
+Incase of environment variables not accesible run windows operating system in admin mode
 
 === Setting up chrome driver in Linux/Ubuntu
 Open a shell and run the below steps
@@ -95,4 +116,4 @@ which chromedriver # you should see /usr/local/bin/webdrivers/chromedriver
 -----------------
 
 == Summary
-Congratulations! You’ve just installed chrome driver successfully in your machine.
+Congratulations! You’ve successfully set up chrome driver in your machine.
