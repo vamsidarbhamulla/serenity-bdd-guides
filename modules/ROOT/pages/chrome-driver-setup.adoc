@@ -33,7 +33,7 @@ Create a folder called webdrivers in C drive (C:\webdrivers).
 . Unpack the downloaded archive using winzip to C:\webdrivers folder. +
 
 .Step 3:
-Add the downloaded folder path (C:\webdrivers) to environment variable named "PATH" using the steps provided in the screenshots below. +
+Add the downloaded folder path (C:\webdrivers) to "PATH" environment variable using the steps provided in the screenshots below. +
 
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="../assets/images/win-env-1.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-2.png["Win-Path-2",width=128,link="../assets/images/win-env-2.png"]
