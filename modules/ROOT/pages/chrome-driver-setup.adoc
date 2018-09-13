@@ -1,4 +1,4 @@
-= Working on a Getting Started guide to setup chromedriver
+= Getting Started guide to setup chromedriver
 Optional Author Name <vamsi.krishna0207@gmail.com>
 Optional version, optional date
 :Author:    Author Vamsi
@@ -15,22 +15,22 @@ To set up chrome driver
 Set up chrome driver to run a basic test
 
 === What you'll need
-About 5 minutes
+About 5 minutes +
+Archieving tools like +
+WinZip or Winrar (for windows) +
+7Zip or unzip (for mac and linux)
 
-=== Installing chrome driver in windows
-Visit the chromedriver downloads page http://chromedriver.chromium.org/downloads[latest-chrome-driver-downloads^].
-
-Download chromedriver_win32.zip file.
-
-To install unpack the downloaded archive and add the downloaded folder path to environment variable named "PATH".
+=== Setting up chrome driver in windows
+Step 1: Open the chromedriver downloads page http://chromedriver.chromium.org/downloads[latest-chrome-driver-downloads^]. +
+Step 2: Download chromedriver_win32.zip file and unpack the downloaded archive using winzip or winrar to a specific folder (eg: C:\webdrivers) +
+Step 3: Add the downloaded folder path (C:\webdrivers) to environment variable named "PATH".
 
 
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-1.png["Win-Path-1",width=128,link="../assets/images/win-env-1.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-2.png["Win-Path-2",width=128,link="../assets/images/win-env-2.png"]
 image:https://github.com/vamsidarbhamulla/serenity-bdd-guides/blob/master/modules/ROOT/assets/images/win-env-3.png["Win-Path-3",width=128,link="../assets/images/win-env-3.png"]
 
-=== Installing chrome driver in Linux/Ubuntu
-
+=== Setting up chrome driver in Linux/Ubuntu
 Open a shell and run the below steps
 
 [source,bash]
@@ -61,7 +61,7 @@ which chromedriver # you should see /usr/local/bin/webdrivers/chromedriver
 
 -----------------
 
-=== Installing chrome driver in Mac
+=== Setting up chrome driver in Mac
 
 Open a terminal and run the below steps
 
