@@ -19,7 +19,6 @@ public class LoginSteps {
         globalHeaderNavigationBar.openAt("http://www.serenitybddpractice.com");
     }
 
-    // When
     @Step("#actor should be able to sign in with their account")
     public void signInWithTheirAccount(String userName, String password){
         globalHeaderNavigationBar.goToLoginScreen();
@@ -27,7 +26,6 @@ public class LoginSteps {
 
     }
 
-    // Then
     @Step("#actor should be able to view their profile")
     public void checkProfile(){
 
