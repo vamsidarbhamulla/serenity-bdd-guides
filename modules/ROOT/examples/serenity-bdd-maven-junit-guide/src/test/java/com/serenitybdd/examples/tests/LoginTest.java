@@ -11,8 +11,18 @@ import org.junit.runner.RunWith;
 @RunWith(SerenityRunner.class)
 public class LoginTest {
 
+    /*@Managed(driver="chrome")
+    WebDriverFacade chromeDriver;
+
+    @Managed(driver="iexplorer")
+    WebDriverFacade ieDriver;
+
+    @Managed(driver="edge")
+    WebDriverFacade edgeDriver;*/
+
+
     @Managed
-    WebDriverFacade webdriver;
+    WebDriverFacade geckoDriver;
 
     @Steps
     LoginSteps carla;
